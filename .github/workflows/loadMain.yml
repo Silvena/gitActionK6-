@@ -9,3 +9,6 @@ jobs:
     - uses: grafana/k6-action@v0.2.0
       with:
         filename: simpleTest.js
+        node-version: '14'
+    - run: npm install -g bats
+    - run: bats -v
